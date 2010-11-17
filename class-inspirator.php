@@ -10,21 +10,15 @@ class Inspirator {
         $a = $this->data[$subject];
         return $a[array_rand($a)];
     }
-
-    private function parseTemplate($template, $options) {
-        preg_match_all("!\{([^{]*)\}!", $template, $matches);
-
-        $replacements = array();
-        for ($i = 0; $i < count($matches[1]); $i++) {
-            $key = $matches[1][$i];
-            if (isset($options[$key])) {
-                $val = $matches[0][$i];
-                $template = str_replace($val, $options[$key], $template);
-            }
-        }
-
-        return $template;
-    }
+    
+    private function replaceOnce($needle, $replace, $haystack) {
+        $pos = strpos($haystack, $needle); 
+        if ($pos === false) { 
+            // Nothing found 
+            return $haystack; 
+        } 
+        return substr_replace($haystack, $replace, $pos, strlen($needle)); 
+    }          
 
     public function getSentence() {
         $sentence = "" .
@@ -38,7 +32,7 @@ class Inspirator {
         $words = array_map(array($this, "randword"), $matches[1]);
 
         foreach ($matches[0] as $i => $m) {
-            $sentence = str_replace($m, $words[$i], $sentence);
+            $sentence = $this->replaceOnce($m, $words[$i], $sentence);
         }
 
         echo $sentence;
