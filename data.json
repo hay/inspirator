@@ -1,4 +1,8 @@
 {
+    "template" : [
+        "This {subject} is made of {production_method} {material}. {situation_verb} {situation}. It was inspired by {inspiration} and therefore it is {description}, {description} and {description}. This {subject} {slogan}.",
+        "{subject} made of {material} is nice for {situation}"
+    ],
     "subject" : [
         "chair",
         "chaise longue",
@@ -279,7 +283,7 @@
         "fascinating",
         "well-considered dimensionality"
     ],
-    "slogan" : [    
+    "slogan" : [
         "should win a price this season",
         "brings a pleasant atmosphere",
         "will perfectly integrate in any space",

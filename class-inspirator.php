@@ -1,14 +1,31 @@
 <?php
 class Inspirator {
     private $data;
+    private $saved = array();
 
     function __construct() {
         $this->data = json_decode(file_get_contents("data.json"), true);
     }
 
     private function randword($subject) {
+        if ( ($subject == "subject") && isset($this->saved["subject"])) {
+            $rand = rand(1,2);
+            if ($rand == 1) {
+                return $this->saved["subject"];
+            } else {
+                $a = $this->data["alternative_subject"];
+                return $a[array_rand($a)];
+            }
+        }
+        
         $a = $this->data[$subject];
-        return $a[array_rand($a)];
+        $word = $a[array_rand($a)];
+        
+        if ($subject == "subject")  {
+            $this->saved["subject"] = $word;
+        }
+        
+        return $word;
     }
     
     private function replaceOnce($needle, $replace, $haystack) {
@@ -19,13 +36,9 @@ class Inspirator {
         } 
         return substr_replace($haystack, $replace, $pos, strlen($needle)); 
     }          
-
+    
     public function getSentence() {
-        $sentence = "" .
-        "This {subject} is made of {production_method} {material}. " .
-        "{situation_verb} {situation}. It was inspired by {inspiration} and ".
-        "therefore it is {description}, {description} and {description}. " .
-        "This {alternative_subject} {slogan}.";
+        $sentence = $this->randword("template");
 
         preg_match_all("!\{([^{]*)\}!", $sentence, $matches);
 
