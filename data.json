@@ -1,6 +1,12 @@
 {
     "template" : [
-        "This {subject} is made of {production_method} {material}. {situation_verb} {situation}. It was inspired by {inspiration} and therefore it is {description}, {description} and {description}. This {subject} {slogan}."
+        "This {subject} is made of {production_method} {material}. {situation_verb} {situation}. It was inspired by {inspiration} and therefore it is {description}, {description} and {description}. This {subject} {slogan}.",
+"Now {situation} will be so convenient with this new {subject}. It is so {description}, {description} and {description}, because it was inspired by {inspiration}, and made of {production_method} {material}. This {subject} {slogan}.",
+"This {subject} is made specifically for {situation}. It is {description}, {description} and {description}, because it was inspired by {inspiration}, and made of {production_method} {material}. This {alternative_subject} {slogan}, and it will be for sale at {pointofsale}",
+"This {subject} is made specifically for {situation}. It is {description}, {description} and {description}, because it was inspired by {inspiration}, and made of {production_method} {material}. This {alternative_subject} {slogan}, and it will be exhibited at {pointofsale}",
+"This {subject}, {bijzin}, is made specifically for {situation}. It is {description}, {description} and {description}, because it was inspired by {inspiration}, and made of {production_method} {material}. This {alternative_subject} {slogan}, and it will be exhibited at {pointofsale}.",
+"Made specifically for {situation}, this {subject} is {description}, {description} and {description}. Inspired by {inspiration}, and made of {production_method} {material}, this {alternative_subject} {slogan}.",
+"Sitting will {positive} with this {subject}. It is made of {production_method} {material}. {situation_verb} {situation}. It was inspired by {inspiration} and therefore it is {description}, {description} and {description}. This {alternative_subject} {slogan}."
     ],
     "subject" : [
         "chair",
@@ -23,6 +29,12 @@
         "innovation",
         "convenient solution",
         "exploration"
+    ],
+    "positive" : [
+        "be a new experience",
+        "delightful",
+        "extremely comfortable",
+        "give warm comfortable sensations"
     ],
     "production_method" : [
         "bent",
@@ -281,6 +293,35 @@
         "emotional",
         "fascinating",
         "well-considered dimensionality"
+ ],
+    "pointofsale" : [
+        "IKEA",
+	"Hema",
+	"Blokker",
+	"Vitra",
+	"online",
+	"the Affordable Art Fair",
+	"ELLE wonen, Inside Design",
+        "Frozen Fountain gallery",
+        "MoMA"
+
+ ],
+    "bijzin" : [
+	"which is based on a new technology",
+	"an infinite source of potential",
+	"clearly the work of a cutting-edge independent designer",
+	"an iconic piece of furniture",
+	"creating tactile pleasure from usage",
+	"standing for modern design",
+	"projected from rationality",
+	"designed with soft fluid lines",
+	"projected from rationality",
+	"beckoning for assimilation and dialogue",
+	"creating a fascinating scenario",
+	"transmitting essence",
+	"driven by a fascination",
+        "paying attention to the extreme detail"
+
     ],
     "slogan" : [
         "should win a price this season",
